@@ -29,4 +29,9 @@ public class FizzBuzzParserShould {
         assertThat(new FizzBuzzParser().parse(2), is("1\nFizz\n"));
     }
 
+    @Test
+    public void parse_numbers_divisible_by_three_to_buzz() {
+        assertThat(new FizzBuzzParser().parse(3), is("1\nFizz\nBuzz\n"));
+    }
+
 }
