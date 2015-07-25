@@ -1,7 +1,7 @@
 public class FizzBuzzParser {
-    public String parse(int number) {
+    public String parse(int length) {
         String parsedSecuence = "";
-        for (int i = 1; i <= number; i++) {
+        for (int i = 1; i <= length; i++) {
             parsedSecuence += parseNumber(i);
         }
         return parsedSecuence;
