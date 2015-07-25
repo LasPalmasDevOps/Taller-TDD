@@ -8,8 +8,9 @@ public class FizzBuzzParser {
     }
 
     private String parseNumber(int number) {
-        if (number == 2) return "Fizz\n";
-        if (number == 3) return "Buzz\n";
+        if (number % 2 == 0 && number % 3 == 0) return "FizzBuzz\n";
+        if (number % 2 == 0) return "Fizz\n";
+        if (number % 3 == 0) return "Buzz\n";
         return number + "\n";
     }
 }
