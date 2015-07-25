@@ -1,3 +1,8 @@
+import org.junit.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+
 public class FizzBuzzParserShould {
 
     /**
@@ -14,5 +19,9 @@ public class FizzBuzzParserShould {
      *   3 => 1\Fizz\Buzz (porque 2 es divisible por 2)
      *   6 => 1\Fizz\Buzz\Fizz\5\FizzBuzz
      */
+    @Test
+    public void not_parse_numbers_when_they_are_not_divisible_by_two_or_three() {
+        assertThat(new FizzBuzzParser().parse(1), is("1\n"));
+    }
 
 }
