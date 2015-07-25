@@ -1,7 +1,17 @@
 public class FizzBuzzParser {
     public String parse(int number) {
-        if (number == 3) return "1\nFizz\nBuzz\n";
-        if (number == 2) return "1\nFizz\n";
-        return "1\n";
+        String parsedSecuence = "";
+        for (int i = 1; i <= number; i++) {
+            if (i == 2) {
+                parsedSecuence += "Fizz\n";
+                continue;
+            }
+            if (i == 3) {
+                parsedSecuence += "Buzz\n";
+                continue;
+            }
+            parsedSecuence += i + "\n";
+        }
+        return parsedSecuence;
     }
 }
